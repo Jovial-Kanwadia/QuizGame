@@ -12,7 +12,7 @@ const router=createBrowserRouter([
     element: <App/>,
     children: [
       {
-        path: '/gate',
+        path: 'gate',
         element: <Gates/>
       },
       {
@@ -20,7 +20,7 @@ const router=createBrowserRouter([
         element: <Home/>
       },
       {
-        path: '/img',
+        path: 'img',
         element: <FlipImage/>
       }
     ]
