@@ -13,7 +13,7 @@ const Gates = () => {
 
     // Function to generate a random string
     const generateRandomString = () => {
-        const str = 'ab123#$%cdef^&*(ghijklmnopqrstuvwxyz';
+        const str = 'abcdefghijklmnopqrstuvwxyz';
         let ans = '';
         for (let i = 0; i < 15; i++) {
             ans += str[Math.floor(Math.random() * str.length)];
