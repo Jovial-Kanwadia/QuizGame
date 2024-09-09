@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Gates = () => {
     const [boxes, setBoxes] = useState([]);
@@ -8,6 +9,7 @@ const Gates = () => {
     const [clicked, setClicked] = useState(false);
     const [timeoutId, setTimeoutId] = useState(null);
     const [inputValue, setInputValue] = useState('');
+    const navigate = useNavigate()
 
     // Function to generate a random string
     const generateRandomString = () => {
@@ -96,7 +98,7 @@ const Gates = () => {
                 className='bg-blue-600 text-white px-4 py-2 rounded-md'
                 onClick={() => {
                     if (inputValue === secretCode) {
-                        window.location.href = 'http://localhost:5173/img';
+                        navigate('/img')
                     } else {
                         alert('Incorrect code');
                     }

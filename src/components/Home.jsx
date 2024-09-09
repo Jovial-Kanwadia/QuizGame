@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
     // State to manage text visibility
+    const navigate = useNavigate()
     const [isVisible, setIsVisible] = useState(true);
     const [value,setValue]=useState('')
 
@@ -13,7 +15,7 @@ const Home = () => {
     const redirect = () => {
         console.log("Ahsutosh")
           if(value==='SHUBHRA' || value==='shubhra'){
-            window.location.href='http://localhost:5173/gate'
+            navigate('/gate')
           }
     }
 
