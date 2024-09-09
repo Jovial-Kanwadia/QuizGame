@@ -16,7 +16,7 @@ const router=createBrowserRouter([
         element: <Gates/>
       },
       {
-        path: "",
+        index: true,
         element: <Home/>
       },
       {
