@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: Game
+    name: QuizGame
     env: static
     plan: free
     static:
