@@ -16,13 +16,14 @@ const FlipImage = () => {
 
     // Create a larger cube with an image on one face
     const geometry = new THREE.BoxGeometry(3, 3, 3); // Adjust size here (width, height, depth)
-    const texture = new THREE.TextureLoader().load('../../public/forest-3622519_640.jpg'); // Image path
+    const textureURL = 'https://imgs.search.brave.com/Fe-DAJmbVzWDznvvsuyR1dwsHvwdIuUvZjUYcRRZ7k0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/dGhpY2stbHVzaC1n/cmVlbi1mb3Jlc3Qu/anBnP3dpZHRoPTEw/MDAmZm9ybWF0PXBq/cGcmZXhpZj0wJmlw/dGM9MA'; // External image URL
+    const texture = new THREE.TextureLoader().load(textureURL);
     const materials = [
-      new THREE.MeshBasicMaterial({ color: 0x0000 }), // Right side
-      new THREE.MeshBasicMaterial({ color: 0x0000 }), // Left side
-      new THREE.MeshBasicMaterial({ color: 0x0000 }), // Top side
-      new THREE.MeshBasicMaterial({ color: 0x0000 }), // Bottom side
-      new THREE.MeshBasicMaterial({ color: 0x0000 }),  // Back side
+      new THREE.MeshBasicMaterial({ color: 0x000000 }), // Right side
+      new THREE.MeshBasicMaterial({ color: 0x000000 }), // Left side
+      new THREE.MeshBasicMaterial({ color: 0x000000 }), // Top side
+      new THREE.MeshBasicMaterial({ color: 0x000000 }), // Bottom side
+      new THREE.MeshBasicMaterial({ color: 0x000000 }), // Back side
       new THREE.MeshBasicMaterial({ map: texture }) // Front side with image
     ];
     const cube = new THREE.Mesh(geometry, materials);
